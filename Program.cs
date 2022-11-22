@@ -2,10 +2,10 @@
 string element = Console.ReadLine();
 string[] elements = element.Split(" ");
 int count = 0;
-int tooMuch = 4;
+int max = 4;
 for (int i = 0; i < elements.Length; i++)
 {
-    if (elements[i].Length < tooMuch) count++;
+    if (elements[i].Length < max) count++;
 }
 
 string[] results = new string[count];
@@ -15,7 +15,7 @@ Console.WriteLine("Элементы, в которых не больше трё�
 for (int i = 0; i < elements.Length; i++)
 {
 
-    if (elements[i].Length < tooMuch)
+    if (elements[i].Length < max)
     {
         results[j] = elements[i];
         Console.Write($"{results[j]} ");
